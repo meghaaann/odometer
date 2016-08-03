@@ -1,7 +1,5 @@
 package odometer;
 
-import java.util.Scanner;
-
 public class Odometer {
 	public static boolean isValid(int number, int size) {
 		int digit;
@@ -30,16 +28,16 @@ public class Odometer {
 				digit = (int) Math.pow(10, size) - 1;
 			}
 		}
-		while (!isValid(digit, size))
+		while (!isValid(digit, size));
 		return digit;
 	}
 	
 	public static int next(int digit,int size)
 	{
 		
-		int nextVal;
+		int nextVal = 0;
 		
-		while(isValid(digit)) {
+		while(isValid(digit, size)) {
 			nextVal=digit++;
 			if ((digit % 10 ^ (size + 1)) == 1) {
 				nextVal=1;
