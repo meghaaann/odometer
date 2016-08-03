@@ -26,4 +26,17 @@ public class TestOdometer {
 		}
 		return true;
 	}
+	
+	public static boolean isValid() {
+		int digit = 1234;
+		int size = 4;
+		if (Odometer.isValid(digit, size)) {
+			return true;
+		}
+		digit = 6889;
+		if (Odometer.isValid(digit, size)) {
+			return false;
+		}
+		return true;
+	}
 }
