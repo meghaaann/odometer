@@ -4,9 +4,9 @@ public class Odometer {
 	public static boolean isValid(int number, int size) {
 		int digit;
 		for(int i=0;i<size-1;i++) {
-			digit=number%10;
-			number=number/10;
-			if(digit<number%10)
+			digit = number%10;
+			number = number/10;
+			if(digit <= number%10)
 				return false;
 		}
 		return true;
@@ -32,9 +32,7 @@ public class Odometer {
 		return digit;
 	}
 	
-	public static int next(int digit,int size)
-	{
-		
+	public static int next(int digit,int size) {
 		int nextVal = 0;
 		
 		while(isValid(digit, size)) {
