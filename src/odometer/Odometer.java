@@ -19,4 +19,12 @@ public class Odometer {
 		}
 		return digit;
 	}
+	
+	public static int nBefore(int digit, int n, int size) {
+		int counter = 0;
+		while (counter < n) {
+			digit = previous(digit, size);
+		}
+		return digit;
+	}
 }
