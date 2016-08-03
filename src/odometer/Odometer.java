@@ -19,7 +19,7 @@ public class Odometer {
 		
 		int nextVal;
 		
-		while(isValid(digit))
+		while(isValid(digit,size))
 		{
 		nextVal=digit++;
 		
