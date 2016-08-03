@@ -67,11 +67,24 @@ public class TestOdometer {
 		return true;
 	}
 	
+	public static boolean testNBefore() {
+		int digit = 1245;
+		int size = 4;
+		if (Odometer.nBefore(digit, 6, size) != 1234) {
+			return false;
+		}
+		if (Odometer.nBefore(digit, 7, size) != 6789) {
+			return false;
+		}
+		return true;
+	}
+	
 	public static void main(String[] args) {
 		System.out.println(testPrevious());
 		System.out.println(testNext());
 		System.out.println(testDifference());
 		System.out.println(testIsValid());
 		System.out.println(testNAfter());
+		System.out.println(testNBefore());
 	}
 }
