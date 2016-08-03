@@ -31,12 +31,12 @@ public class TestOdometer {
 		int digit1 = 1234;
 		int digit2=1237;
 		int size=4;
-		if( Odometer.differenceBetweenOdNumbers(digit1, digit2, size)!=3) {
+		if (Odometer.differenceBetweenOdNumbers(digit1, digit2, size)!=3) {
 			return false;
 		}
 		digit1 = 1234;
 		digit2 = 1245;
-		if(Odometer.differenceBetweenOdNumbers(digit1, digit2, size)!=6) {
+		if (Odometer.differenceBetweenOdNumbers(digit1, digit2, size)!=6) {
 			return false;
 		}
 		return true;
@@ -45,12 +45,23 @@ public class TestOdometer {
 	public static boolean testIsValid() {
 		int digit = 1234;
 		int size = 4;
-		if (Odometer.isValid(digit, size)) {
-			return true;
+		if (!Odometer.isValid(digit, size)) {
+			return false;
 		}
 		digit = 6889;
 		if (Odometer.isValid(digit, size)) {
-
+			return false;
+		}
+		return true;
+	}
+	
+	public static boolean testNAfter() {
+		int digit = 1234;
+		int size = 4;
+		if (Odometer.nAfter(digit, 6, size) != 1245) {
+			return false;
+		}
+		if (Odometer.nAfter(digit, 4, size) != 1238) {
 			return false;
 		}
 		return true;
@@ -61,5 +72,6 @@ public class TestOdometer {
 		System.out.println(testNext());
 		System.out.println(testDifference());
 		System.out.println(testIsValid());
+		System.out.println(testNAfter());
 	}
 }
