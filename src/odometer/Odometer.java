@@ -11,4 +11,12 @@ public class Odometer {
 		while (!isValid(digit, size))
 		return digit;
 	}
+	
+	public static int nAfter(int digit, int n, int size) {
+		int counter = 0;
+		while (counter < n) {
+			digit = next(digit, size);
+		}
+		return digit;
+	}
 }
