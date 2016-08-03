@@ -31,10 +31,27 @@ public class Odometer {
 		return nextVal;
 	}
 	
+	public static int nAfter(int digit, int n, int size) {
+		int counter = 0;
+		while (counter < n) {
+			digit = next(digit, size);
+		}
+		return digit;
+	}
+	
+	public static int nBefore(int digit, int n, int size) {
+		int counter = 0;
+		while (counter < n) {
+			digit = previous(digit, size);
+		}
+		return digit;
+	}
+	
 	public static void main(String args[])
 	{
 		System.out.println("Enter the value");
 		Scanner reader = new Scanner(System.in); 
 		int digit=reader.nextInt();
+		
 	}
 }
