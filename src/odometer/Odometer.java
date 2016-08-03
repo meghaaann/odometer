@@ -49,6 +49,7 @@ public class Odometer {
 		int counter = 0;
 		while (counter < n) {
 			digit = next(digit, size);
+			counter++;
 		}
 		return digit;
 	}
