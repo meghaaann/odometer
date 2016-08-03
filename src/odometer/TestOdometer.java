@@ -26,4 +26,9 @@ public class TestOdometer {
 		}
 		return true;
 	}
+	
+	public static void main(String[] args) {
+		System.out.println(testPrevious());
+		System.out.println(testNext());
+	}
 }
