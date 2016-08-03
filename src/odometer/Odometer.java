@@ -19,14 +19,11 @@ public class Odometer {
 		
 		int nextVal;
 		
-		while(isValid(digit))
-		{
-		nextVal=digit++;
-		
-		if((digit%10^(size+1))==1)
-		{
-			nextVal=1;
-		}
+		while(isValid(digit)) {
+			nextVal=digit++;
+			if ((digit % 10 ^ (size + 1)) == 1) {
+				nextVal=1;
+			}
 		}
 		return nextVal;
 	}
@@ -45,13 +42,5 @@ public class Odometer {
 			digit = previous(digit, size);
 		}
 		return digit;
-	}
-	
-	public static void main(String args[])
-	{
-		System.out.println("Enter the value");
-		Scanner reader = new Scanner(System.in); 
-		int digit=reader.nextInt();
-		
 	}
 }
