@@ -3,6 +3,9 @@ package odometer;
 public class Odometer {
 	public static boolean isValid(int number, int size) {
 		int digit;
+		if (number < Math.pow(10, size-1) - 1) {
+			return false;
+		}
 		for(int i=0;i<size-1;i++) {
 			digit = number%10;
 			number = number/10;
